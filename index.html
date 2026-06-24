@@ -115,6 +115,12 @@
     .nav-links a:hover { color: var(--accent-cyan); }
     .nav-links a:hover::after { width: 100%; }
     .nav-links a i { margin-right: 6px; }
+    .nav.scrolled {
+      background: rgba(10,10,20,0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 1px 0 var(--border-color);
+    }
     .nav-toggle {
       display: none;
       background: none;
@@ -625,6 +631,106 @@
     }
     .service-cta:hover { border-color: var(--accent-cyan); }
 
+    .project-thumb {
+      height: 120px;
+      border-radius: 6px;
+      margin-bottom: 1.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-mono);
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.15);
+      letter-spacing: 2px;
+      position: relative;
+      overflow: hidden;
+    }
+    .project-thumb::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(0,255,242,0.08), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .project-card:hover .project-thumb::after { opacity: 1; }
+
+    .stat-number {
+      font-family: var(--font-mono);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .stat-number.counting { text-shadow: var(--glow-cyan); }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 100;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      color: var(--accent-cyan);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.4s;
+      pointer-events: none;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    .back-to-top:hover {
+      border-color: var(--accent-cyan);
+      box-shadow: var(--glow-cyan);
+      transform: translateY(-3px);
+    }
+
+    .skills-bars { display: flex; flex-direction: column; gap: 1.8rem; }
+    .skill-group { }
+    .skill-group-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 0.8rem;
+    }
+    .skill-group-header i { color: var(--accent-cyan); font-size: 0.9rem; }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .skill-tag {
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      background: rgba(139,92,246,0.1);
+      border: 1px solid rgba(139,92,246,0.15);
+      color: var(--text-secondary);
+      transition: all 0.3s;
+    }
+    .skill-tag:hover {
+      background: rgba(0,255,242,0.1);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      transform: translateY(-2px);
+    }
+
     .contact-content {
       text-align: center;
       max-width: 600px;
@@ -833,15 +939,15 @@
         </div>
         <div class="about-stats reveal-right">
           <div class="stat-card">
-            <div class="stat-number">6+</div>
+            <div class="stat-number" data-count="6" data-suffix="+">0</div>
             <div class="stat-label">Years Exp.</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">10+</div>
+            <div class="stat-number" data-count="10" data-suffix="+">0</div>
             <div class="stat-label">Projects</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">4</div>
+            <div class="stat-number" data-count="4">0</div>
             <div class="stat-label">Companies</div>
           </div>
           <div class="stat-card">
@@ -1348,6 +1454,10 @@
     </section>
   </main>
 
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
   <footer>
     <p>Built with &hearts; by Ashim Ahmad &middot; <span id="year"></span></p>
   </footer>
@@ -1498,6 +1608,39 @@
       });
     }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
     revealEls.forEach(el => observer.observe(el));
+
+    const backBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backBtn.classList.toggle('visible', window.scrollY > 500);
+    });
+    backBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    let counted = false;
+    const statObserver = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && !counted) {
+        counted = true;
+        document.querySelectorAll('.stat-number[data-count]').forEach(el => {
+          const target = parseInt(el.dataset.count);
+          const suffix = el.dataset.suffix || '';
+          el.textContent = '0';
+          el.classList.add('counting');
+          let current = 0;
+          const step = Math.max(1, Math.floor(target / 40));
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) {
+              current = target;
+              clearInterval(timer);
+            }
+            el.textContent = current + suffix;
+          }, 30);
+        });
+      }
+    }, { threshold: 0.5 });
+    const statsSection = document.querySelector('.about-stats');
+    if (statsSection) statObserver.observe(statsSection);
   </script>
 </body>
 </html>
