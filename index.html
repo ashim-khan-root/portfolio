@@ -960,9 +960,33 @@
       box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
       animation: pulse 1.6s infinite;
     }
-    .live-badge-prod .live-dot {
+    }  /* end live-badge-prod .live-dot */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: -1.5rem 0 2rem;
+    }
+    .filter-btn {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      padding: 0.5rem 1.1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 999px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .filter-btn:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+    .filter-btn.active {
       background: var(--accent-cyan);
-      box-shadow: 0 0 8px rgba(0, 255, 242, 0.9);
+      color: var(--bg-primary);
+      border-color: var(--accent-cyan);
+      box-shadow: var(--glow-cyan);
     }
   </style>
   <script type="application/ld+json">
@@ -996,6 +1020,7 @@
       <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
       <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
       <li><a href="#live"><i class="fas fa-rocket"></i> Live Work</a></li>
+      <li><a href="#notes"><i class="fas fa-pen-nib"></i> Notes</a></li>
       <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
@@ -1027,11 +1052,14 @@
         <a href="#contact" class="btn btn-secondary">
           <i class="fas fa-paper-plane"></i> Get In Touch
         </a>
+        <a href="resume.pdf" class="btn btn-secondary" download>
+          <i class="fas fa-file-pdf"></i> Download Resume
+        </a>
       </div>
       <div class="hero-social">
         <a href="https://github.com/ashim-khan-root" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
         <a href="https://qa.linkedin.com/in/ashim-ahmad-b26249234" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://github.com/ashim-khan-root" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-x-twitter"></i></a>
+        
       </div>
       <div class="hero-scroll-indicator">
         <span>Scroll</span>
@@ -1446,6 +1474,13 @@
     <section id="projects">
       <div class="section-label reveal">projects</div>
       <h2 class="section-title reveal">Things I've <span>Built</span></h2>
+      <div class="filter-bar reveal" id="projectFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="client">Client</button>
+        <button class="filter-btn" data-filter="product">Products</button>
+        <button class="filter-btn" data-filter="tool">Tools</button>
+        <button class="filter-btn" data-filter="work">Work</button>
+      </div>
       <div class="projects-grid stagger-children reveal">
         <div class="project-card">
           <div class="project-header">
@@ -1796,6 +1831,64 @@
       </div>
     </section>
 
+    <section id="notes">
+      <div class="section-label reveal">notes</div>
+      <h2 class="section-title reveal">Recent <span>Notes</span> &amp; Writing</h2>
+      <div class="projects-grid stagger-children reveal">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-pen-nib" style="color:var(--accent-cyan)"></i></div>
+          </div>
+          <h3 class="project-title">Building MedVerse: a health-learning app for students</h3>
+          <p class="project-desc">
+            <span style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.75rem">Nov 2026 · 6 min read</span><br>
+            How I designed first-aid quizzes, a body explorer, and habit streaks into a fast,
+            mobile-first educational app — and what I learned about keeping health content responsible.
+          </p>
+          <div class="project-tech">
+            <span>Health Tech</span>
+            <span>Web App</span>
+            <span>UX</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-server" style="color:var(--accent-purple)"></i></div>
+          </div>
+          <h3 class="project-title">Deploying ERPNext on Linux with Docker Compose</h3>
+          <p class="project-desc">
+            <span style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.75rem">Oct 2026 · 8 min read</span><br>
+            A practical walkthrough of provisioning sites, databases, backups, and OAuth integrations
+            for a frappe_docker stack running on a Linux server.
+          </p>
+          <div class="project-tech">
+            <span>ERPNext</span>
+            <span>Docker</span>
+            <span>Linux</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-magnifying-glass-chart" style="color:#f59e0b"></i></div>
+          </div>
+          <h3 class="project-title">SEO for Qatar-based service businesses</h3>
+          <p class="project-desc">
+            <span style="color:var(--text-muted);font-family:var(--font-mono);font-size:0.75rem">Sep 2026 · 5 min read</span><br>
+            Structured data, bilingual EN/AR pages, and local intent — what actually moved rankings
+            for facility-management and manpower sites in Doha.
+          </p>
+          <div class="project-tech">
+            <span>SEO</span>
+            <span>Schema</span>
+            <span>Bilingual</span>
+          </div>
+        </div>
+      </div>
+      <p style="text-align:center;color:var(--text-muted);font-family:var(--font-mono);font-size:0.8rem;margin-top:1rem">
+        More posts coming soon. Want to collaborate on a write-up? <a href="#contact" style="color:var(--accent-cyan)">Get in touch</a>.
+      </p>
+    </section>
+
     <section id="contact">
       <div class="section-label reveal">contact</div>
       <h2 class="section-title reveal">Get In <span>Touch</span></h2>
@@ -1811,7 +1904,7 @@
         <div class="contact-social">
           <a href="https://github.com/ashim-khan-root" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
           <a href="https://qa.linkedin.com/in/ashim-ahmad-b26249234" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://github.com/ashim-khan-root" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-x-twitter"></i></a>
+          
         </div>
       </div>
     </section>
@@ -1880,6 +1973,45 @@
       setTimeout(typeEffect, isDeleting ? 40 : 80);
     }
     typeEffect();
+
+    // Project category mapping + filter
+    const projectCats = {
+      'Secuview SEO & Content Engine': 'client',
+      'Qatar Business Directory': 'client',
+      'FreeToolz.in': 'product',
+      'AsliElectronics — Security E-Commerce in Qatar': 'client',
+      'StarfoxSecu Rebuild': 'client',
+      'Khaleej Business Hub': 'client',
+      'StarfoxSecu — GitHub Pages Prototype': 'client',
+      'Bulk Email Sender': 'tool',
+      'IOCL Bulk Toll Payment Portal': 'work',
+      'IOCL ID Card & SD-WAN Dashboard': 'work',
+      'E-Commerce Web App (DevBros)': 'work',
+      'Ratesheet & Product Catalog Viewer': 'tool',
+      'Quotation Engine': 'tool',
+      'ERPNext & Business Systems Implementation': 'system',
+      'AI Agent Brain (Agent-MCP)': 'tool',
+      '[NewCo] Demo — Tech Services Platform': 'product',
+      'Personal Growth Coach (AI-Powered)': 'tool'
+    };
+    document.querySelectorAll('#projects .project-card').forEach(card => {
+      const title = card.querySelector('.project-title')?.textContent?.trim() || '';
+      card.dataset.cat = projectCats[title] || 'other';
+    });
+    const filterBar = document.getElementById('projectFilters');
+    if (filterBar) {
+      filterBar.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBar.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const f = btn.dataset.filter;
+          document.querySelectorAll('#projects .project-card').forEach(card => {
+            const show = f === 'all' || card.dataset.cat === f;
+            card.style.display = show ? '' : 'none';
+          });
+        });
+      });
+    }
 
     const canvas = document.getElementById('particle-canvas');
     const ctx = canvas.getContext('2d');
