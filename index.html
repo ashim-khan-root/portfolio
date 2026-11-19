@@ -930,8 +930,39 @@
         transition-duration: 0.01ms !important;
       }
     }
+    .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      color: #22c55e;
+      background: rgba(34, 197, 94, 0.10);
+      border: 1px solid rgba(34, 197, 94, 0.35);
+      border-radius: 999px;
+      padding: 3px 10px;
+      margin-bottom: 0.9rem;
+    }
+    .live-badge-prod {
+      color: var(--accent-cyan);
+      background: rgba(0, 255, 242, 0.08);
+      border-color: rgba(0, 255, 242, 0.35);
+    }
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(34, 197, 94, 0.9);
+      animation: pulse 1.6s infinite;
+    }
+    .live-badge-prod .live-dot {
+      background: var(--accent-cyan);
+      box-shadow: 0 0 8px rgba(0, 255, 242, 0.9);
+    }
   </style>
-</head>
 <body>
 
   <canvas id="particle-canvas"></canvas>
@@ -948,6 +979,7 @@
       <li><a href="#skills"><i class="fas fa-code"></i> Skills</a></li>
       <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
       <li><a href="#projects"><i class="fas fa-folder"></i> Projects</a></li>
+      <li><a href="#live"><i class="fas fa-rocket"></i> Live Work</a></li>
       <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
     </ul>
   </nav>
@@ -970,7 +1002,7 @@
         currently building engineering tools at <a href="https://secuview.com" target="_blank">Secuview</a>.
         I architect full-stack applications with <strong>Java, Python, React &amp; Node.js</strong>,
         deploy containerized infrastructure with <strong>Docker</strong>, administer Linux systems,
-        and automate operations with <strong>AI workflows</strong>.
+        ship live client sites, and automate operations with <strong>AI workflows</strong>.
       </p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary">
@@ -1013,8 +1045,9 @@
           <p>
             I'm deeply invested in <strong>AI engineering</strong> &mdash; building MCP servers,
             agent systems, and workflow automations with <strong>n8n</strong> and local LLMs,
-            and shipping side projects like <strong>FreeToolz.in</strong> and
-            <strong>aslielectronic.com</strong>.
+            and shipping side projects and client work like <strong>FreeToolz.in</strong>,
+            <strong>MedVerse</strong>, <strong>Merlyne Qatar</strong>, <strong>Crompton International</strong>,
+            and <strong>Total Engineering Works</strong>.
           </p>
         </div>
         <div class="about-stats reveal-right">
@@ -1023,7 +1056,7 @@
             <div class="stat-label">Years Exp.</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number" data-count="10" data-suffix="+">10+</div>
+            <div class="stat-number" data-count="20" data-suffix="+">20+</div>
             <div class="stat-label">Projects</div>
           </div>
           <div class="stat-card">
@@ -1188,7 +1221,7 @@
             <ul>
               <li>Engineered internal business applications &mdash; quotation tooling and ratesheet systems &mdash; with Python, Flask, SQLite, and Docker Compose, cutting manual quoting time dramatically</li>
               <li>Deployed and administered containerized services and SQLite databases, handling backups, monitoring, and system reliability</li>
-              <li>Implemented ERP systems and n8n automation workflows to digitize operations and reduce manual reporting time by 60%</li>
+              <li>Implemented ERP systems (ERPNext on Linux/Docker) and n8n automation workflows to digitize operations and reduce manual reporting time by 60%</li>
               <li>Built AI chatbots and automation pipelines integrating product catalogs for the company's security &amp; smart-home e-commerce platform (WordPress/WooCommerce)</li>
               <li>Managed technical SEO and structured data across 200+ product pages, supporting organic discovery in parallel with engineering work</li>
             </ul>
@@ -1246,6 +1279,149 @@
               <li>Debugged and resolved 50+ software issues across web applications, ensuring high availability and smooth user experience</li>
               <li>Supported digital marketing campaigns through SEO content optimization and technical marketing execution</li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="live">
+      <div class="section-label reveal">live work</div>
+      <h2 class="section-title reveal">Live <span>Deployments</span> &amp; Client Work</h2>
+      <p class="reveal" style="color:var(--text-secondary);max-width:760px;margin:-1.5rem 0 2.5rem;font-size:0.95rem;line-height:1.7">
+        Real products and client sites I've designed, built, and shipped to production — from health-tech web apps
+        to facility-management platforms, manpower portals, and metal-fabrication storefronts. Each one is live,
+        maintained, and evolving.
+      </p>
+      <div class="projects-grid stagger-children reveal">
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-heartbeat" style="color:#ff00e4"></i></div>
+            <div class="project-links">
+              <a href="https://medverse.starfox.dpdns.org" target="_blank" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,rgba(255,0,228,0.18),rgba(139,92,246,0.12));color:rgba(255,255,255,0.18)">MEDVERSE</div>
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <h3 class="project-title">MedVerse — Health Education Platform</h3>
+          <p class="project-desc">
+            An interactive health-learning web app for curious students: first-aid quizzes, myth-busting claim-of-the-day,
+            a 3D body explorer, medicine lookup, habit streaks, and nearby-care finder. Educational, fast, and
+            mobile-first — built and hosted on my own subdomain.
+          </p>
+          <div class="project-tech">
+            <span>Web App</span>
+            <span>Health Tech</span>
+            <span>Quizzes</span>
+            <span>Body Explorer</span>
+            <span>Cloudflare</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-building" style="color:var(--accent-cyan)"></i></div>
+            <div class="project-links">
+              <a href="https://merlyneqatar.com" target="_blank" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,rgba(0,255,242,0.18),rgba(139,92,246,0.12));color:rgba(255,255,255,0.18)">MERLYNE</div>
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <h3 class="project-title">Merlyne Qatar — Facility Management Platform</h3>
+          <p class="project-desc">
+            Full corporate site for an integrated facility-management company in Qatar — 11 service lines, 10 sectors,
+            credentials, case studies, and a proposal-request flow. Bilingual (EN/AR), SEO-first, deployed on a
+            custom domain with Cloudflare.
+          </p>
+          <div class="project-tech">
+            <span>Corporate Site</span>
+            <span>Bilingual EN/AR</span>
+            <span>SEO</span>
+            <span>Cloudflare</span>
+            <span>Lead Gen</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-users-gear" style="color:var(--accent-purple)"></i></div>
+            <div class="project-links">
+              <a href="https://cromptonqatar.com" target="_blank" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,rgba(139,92,246,0.22),rgba(0,255,242,0.10));color:rgba(255,255,255,0.18)">CROMPTON</div>
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <h3 class="project-title">Crompton International — Manpower Supply Portal</h3>
+          <p class="project-desc">
+            Workforce-supply and manpower-mobilization platform for a Qatar-licensed contractor — white &amp; blue collar
+            staffing, project-based deployment, recruitment, outsourcing, and payroll support across 12+ sectors.
+            Bilingual (EN/AR) with WhatsApp lead capture.
+          </p>
+          <div class="project-tech">
+            <span>Corporate Site</span>
+            <span>Bilingual EN/AR</span>
+            <span>Manpower</span>
+            <span>WhatsApp Leads</span>
+            <span>Cloudflare</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-hammer" style="color:#f59e0b"></i></div>
+            <div class="project-links">
+              <a href="https://totalengworks.com" target="_blank" aria-label="Live site"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,rgba(245,158,11,0.20),rgba(139,92,246,0.10));color:rgba(255,255,255,0.18)">TEW</div>
+          <span class="live-badge"><span class="live-dot"></span> LIVE</span>
+          <h3 class="project-title">Total Engineering Works — Metal Fabrication Site</h3>
+          <p class="project-desc">
+            Live storefront for a metal-fabrication workshop in Lucknow, India — structural steel, welding, cut/bend/form,
+            turning &amp; machining, custom prototypes, and on-site assembly. Quote-by-phone/WhatsApp flow while the full
+            site is being finalized.
+          </p>
+          <div class="project-tech">
+            <span>Static Site</span>
+            <span>Metal Fabrication</span>
+            <span>WhatsApp Leads</span>
+            <span>Cloudflare</span>
+          </div>
+        </div>
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-cubes" style="color:var(--accent-cyan)"></i></div>
+            <div class="project-links">
+              <a href="#" target="_blank" aria-label="External link"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <div class="project-thumb" style="background:linear-gradient(135deg,rgba(0,255,242,0.18),rgba(34,197,94,0.12));color:rgba(255,255,255,0.18)">ERPNext</div>
+          <span class="live-badge live-badge-prod"><span class="live-dot"></span> PRODUCTION</span>
+          <h3 class="project-title">ERPNext &amp; Business Systems on Linux</h3>
+          <p class="project-desc">
+            Deployed and administer ERPNext (frappe_docker) plus TwentyCRM on Docker Compose stacks running on Linux
+            servers — site provisioning, databases, backups, OAuth integrations, and day-to-day ops to digitize core
+            business workflows.
+          </p>
+          <div class="project-tech">
+            <span>ERPNext</span>
+            <span>frappe_docker</span>
+            <span>Docker Compose</span>
+            <span>Linux Servers</span>
+            <span>CRM</span>
+          </div>
+        </div>
+        <div class="project-card service-cta">
+          <div class="project-header">
+            <div class="project-folder"><i class="fas fa-rocket" style="color:var(--accent-cyan)"></i></div>
+          </div>
+          <div class="project-thumb" style="background:rgba(0,255,242,0.05);color:rgba(255,255,255,0.12)">NEXT</div>
+          <h3 class="project-title">More In Progress&hellip;</h3>
+          <p class="project-desc">
+            Always building — new client sites, internal tools, and automations are in the pipeline.
+            If you've got a project in mind, let's talk.
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Next.js</span>
+            <span>Python</span>
+            <span>Docker</span>
           </div>
         </div>
       </div>
@@ -1661,7 +1837,7 @@
       });
     });
 
-    const words = ['Software Developer', 'System Administrator', 'Full-Stack Engineer', 'DevOps & Automation', 'AI Workflows'];
+    const words = ['Software Developer', 'System Administrator', 'Full-Stack Engineer', 'DevOps & Automation', 'Live Product Builder', 'AI Workflows'];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
