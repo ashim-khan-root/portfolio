@@ -1,0 +1,116 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 4023 >>
+stream
+BT
+/F2 22 Tf
+1 0 0 1 50 740 Tm (Ashim Ahmad) Tj
+/F1 13 Tf
+1 0 0 1 50 714 Tm (Software Developer & System Administrator) Tj
+/F1 10 Tf
+1 0 0 1 50 696 Tm (Doha, Qatar  |  ashimkhn198@gmail.com  |  github.com/ashim-khan-root) Tj
+1 0 0 1 50 682 Tm (linkedin.com/in/ashim-ahmad-b26249234) Tj
+/F2 13 Tf
+1 0 0 1 50 656 Tm (SUMMARY) Tj
+0.6 w 50 652 m 562 652 l S
+/F1 10.5 Tf
+1 0 0 1 50 642 Tm (Software Developer & System Administrator with 6+ years across full-stack engineering,) Tj
+1 0 0 1 50 629 Tm (Linux/Docker infrastructure, ERP systems, and AI-driven automation. Builds and ships) Tj
+1 0 0 1 50 616 Tm (production web apps, client sites, and internal business tools end-to-end.) Tj
+/F2 13 Tf
+1 0 0 1 50 594 Tm (EXPERIENCE) Tj
+0.6 w 50 590 m 562 590 l S
+/F2 11 Tf
+1 0 0 1 50 580 Tm (Software Developer & System Administrator - Starfox Security System \(Secuview\), Doha, Qatar) Tj
+/F1 9.5 Tf
+1 0 0 1 50 567 Tm (01/2026 - Present) Tj
+/F1 10 Tf
+1 0 0 1 50 554 Tm (- Engineered quotation tooling and ratesheet systems \(Python, Flask, SQLite, Docker Compose\).) Tj
+1 0 0 1 50 542 Tm (- Deployed ERPNext \(frappe_docker\) and TwentyCRM on Linux/Docker Compose stacks.) Tj
+1 0 0 1 50 530 Tm (- Built AI chatbots and n8n automation workflows; managed SEO across 200+ product pages.) Tj
+/F2 11 Tf
+1 0 0 1 50 514 Tm (Lab Assistant - Al-Duhail Metal Factory, Ar-Rayyan, Qatar) Tj
+/F1 9.5 Tf
+1 0 0 1 50 501 Tm (06/2025 - 12/2025) Tj
+/F1 10 Tf
+1 0 0 1 50 488 Tm (- Chemical testing on aluminium powder coating; AutoCAD drawings; data entry and docs.) Tj
+/F2 11 Tf
+1 0 0 1 50 472 Tm (IT Assistant - Shanti Machinery Pvt. Ltd.) Tj
+/F1 9.5 Tf
+1 0 0 1 50 459 Tm (06/2024 - 01/2025) Tj
+/F1 10 Tf
+1 0 0 1 50 446 Tm (- Streamlined office operations \(+20% productivity\); 50+ AutoCAD technical drawings.) Tj
+/F2 11 Tf
+1 0 0 1 50 430 Tm (Software Engineer - Indian Oil Corp. Ltd. \(IOCL\), UPSO-1) Tj
+/F1 9.5 Tf
+1 0 0 1 50 417 Tm (11/2022 - 10/2023) Tj
+/F1 10 Tf
+1 0 0 1 50 404 Tm (- Bulk Toll Payment portal \(Java, Spring Boot\); ID Card approval system; SD-WAN dashboard.) Tj
+1 0 0 1 50 392 Tm (- Oracle DB / SQL Server ops; network host discovery tool \(CSV export\).) Tj
+/F2 11 Tf
+1 0 0 1 50 376 Tm (Software Developer - DevBros IT Consultancy & Training, Bareilly, India) Tj
+/F1 9.5 Tf
+1 0 0 1 50 363 Tm (06/2020 - 05/2022) Tj
+/F1 10 Tf
+1 0 0 1 50 350 Tm (- Full-stack e-commerce app \(React, Next.js\); data dashboards; SEO support.) Tj
+/F2 13 Tf
+1 0 0 1 50 328 Tm (SKILLS) Tj
+0.6 w 50 324 m 562 324 l S
+/F1 10 Tf
+1 0 0 1 50 314 Tm (Languages: Java, Python, JavaScript, SQL, Bash) Tj
+1 0 0 1 50 302 Tm (Frameworks: Spring Boot, React, Next.js, Node.js, Flask, FastAPI) Tj
+1 0 0 1 50 290 Tm (DevOps/Infra: Docker, Docker Compose, Linux, CI/CD, Cloudflare Pages) Tj
+1 0 0 1 50 278 Tm (Databases: Oracle DB, SQL Server, SQLite) Tj
+1 0 0 1 50 266 Tm (AI/Automation: MCP Servers, n8n, LLM Workflows, RAG, Prompt Engineering) Tj
+1 0 0 1 50 254 Tm (CMS/Tools: WordPress, WooCommerce, Hugo, Git, GA4, AutoCAD) Tj
+/F2 13 Tf
+1 0 0 1 50 232 Tm (SELECTED PROJECTS) Tj
+0.6 w 50 228 m 562 228 l S
+/F1 10 Tf
+1 0 0 1 50 218 Tm (- MedVerse - health-learning web app \(quizzes, body explorer, habit streaks\)) Tj
+1 0 0 1 50 206 Tm (- Merlyne Qatar - facility management corporate site \(bilingual EN/AR\)) Tj
+1 0 0 1 50 194 Tm (- Crompton International - manpower supply portal \(bilingual EN/AR\)) Tj
+1 0 0 1 50 182 Tm (- Total Engineering Works - metal fabrication storefront) Tj
+1 0 0 1 50 170 Tm (- FreeToolz.in - 100+ free online tools \(Hugo, Cloudflare Pages\)) Tj
+1 0 0 1 50 158 Tm (- ERPNext & business systems on Linux servers \(Docker Compose\)) Tj
+1 0 0 1 50 146 Tm (- Quotation Engine & Ratesheet Catalog \(Flask, SQLite, Docker\)) Tj
+1 0 0 1 50 134 Tm (- Personal Growth Coach - AI CLI with persistent memory \(Python, MCP\)) Tj
+/F2 13 Tf
+1 0 0 1 50 114 Tm (EDUCATION) Tj
+0.6 w 50 110 m 562 110 l S
+/F1 10 Tf
+1 0 0 1 50 100 Tm (B.Tech / B.E. in Computer Science & Engineering \(India\)) Tj
+/F1 9.5 Tf
+1 0 0 1 50 88 Tm (Graduated 2022) Tj
+ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000185 00000 n 
+0000000260 00000 n 
+0000004335 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4471
+%%EOF
